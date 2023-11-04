@@ -164,18 +164,6 @@ fn build_regex_from_pattern(pattern: &str, auth_token: &str) -> Result<Regex, Bo
             return Ok(regex);
         }
     }
-    /*let client = Client::new(auth_token.to_string());
-    let req = ChatCompletionRequest::new(
-        chat_completion::GPT3_5_TURBO.to_string(),
-        vec![chat_completion::ChatCompletionMessage {
-            role: chat_completion::MessageRole::user,
-            content: String::from("What is Bitcoin?"),
-            name: None,
-            function_call: None,
-        }],
-    );
-    let result = client.chat_completion(req)?;
-    println!("{:?}", result.choices[0].message.content);*/
 
     Err("Failed to build regex from pattern".into())
 }
